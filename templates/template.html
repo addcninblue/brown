@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown's scoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      .container {
+        max-width: 1000px;
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="container">
+      <table style="width:100%">
+        <tr>
+          <th>ID</th>
+          <th>B1</th> 
+          <th>B2</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>self</th>
+          <th>average</th>
+        </tr>
+        {% for score in scores %}
+        <tr>
+          <td>{{score[0]}}</td>
+          <td>{{score[1]}}</td>
+          <td>{{score[2]}}</td>
+          <td>{{score[3]}}</td>
+          <td>{{score[4]}}</td>
+          <td>{{score[5]}}</td>
+          <td>{{score[6]}}</td>
+          <td>{{score[7]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
